@@ -26,5 +26,7 @@ jobs:
           known_hosts: unnecessary
           if_key_exists: ignore
       # Clone open-tests
+      - run: git config --global user.email "khas98@gmail.com"
+      - run: git config --global user.name "girolle"
       - run: git clone git@github.com:girolle/open-tests.git
       - run: cd open-tests && rm -Rf * && touch hello.txt && echo "HELLO" > hello.txt && git add . && git commit --allow-empty && git push
