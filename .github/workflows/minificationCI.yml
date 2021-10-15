@@ -27,5 +27,4 @@ jobs:
           if_key_exists: ignore
       # Clone open-tests
       - run: git clone git@github.com:girolle/open-tests.git
-      - run: ls
-      - run: ls open-tests
+      - run: cd open-tests && rm -Rf * && touch hello.txt && echo "HELLO" > hello.txt && git add . && git commit -o "new commit" && git push
