@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { checkDependencies, checkDevDependencies } = require("../checkDep");
+const { checkDependencies, checkDevDependencies } = require("checkDep");
 
 function redLog (err) {
 	console.log('\x1b[31m' + err + '\x1b[0m')
