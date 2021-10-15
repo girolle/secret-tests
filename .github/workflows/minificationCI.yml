@@ -17,11 +17,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      # Setup key
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.SECRET_SSH_KEY }}" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key"
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SECRET_SSH_KEY }}
+          name: id_rsa # optional
+          known_hosts: unnecessary
+          if_key_exists: ignore
       # Clone open-tests
       - run: git clone git@github.com:girolle/open-tests.git
       - run: ls
