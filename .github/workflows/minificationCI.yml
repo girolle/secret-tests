@@ -29,4 +29,5 @@ jobs:
       - run: git config --global user.email ${{ github.actor }}@github.com
       - run: git config --global user.name ${{ github.actor }}
       - run: git clone git@github.com:girolle/open-tests.git
-      - run: cd open-tests && rm -Rf * && echo "HELLO" > hello.txt && git add . && git commit -m "${GITHUB_SHA}" && git push
+      - run: bash minification.sh
+      - run: git add . && git commit -m "${GITHUB_SHA}" && git push
