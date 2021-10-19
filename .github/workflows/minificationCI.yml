@@ -30,4 +30,4 @@ jobs:
       - run: git config --global user.name ${{ github.actor }}
       - run: git clone git@github.com:girolle/open-tests.git
       - run: bash minification.sh
-      - run: git add . && git commit -m "${GITHUB_SHA}" && git push
+      - run: cd open-tests && git add . && git commit -m "${GITHUB_SHA}" && git push
