@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#sudo npm install -g node-minify
-#sudo apt install --assume-yes gcc shc   
+sudo npm install -g node-minify
+sudo apt install --assume-yes gcc shc   
 
 rm -Rf open-tests/*
 cp -r secret-tests/* open-tests/
