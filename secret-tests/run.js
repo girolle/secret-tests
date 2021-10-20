@@ -1,5 +1,5 @@
 const projectPath = process.env.PROJECT_ROOT
-process.exit("test")
+process.exit(1)
 
 
 console.log = () => 0;
