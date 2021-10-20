@@ -1,5 +1,12 @@
 #!/bin/bash
 
-pwd
+function check(){
+	if [[ $? != 0 ]]
+		then
+		print_red "FAILED"
+		exit 1
+	fi
+}
+
 node open-tests/run.js
-exit $?
+check
