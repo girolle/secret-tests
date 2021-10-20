@@ -1,6 +1,4 @@
 const projectPath = process.env.PROJECT_ROOT
-process.exit(1)
-
 
 console.log = () => 0;
 const console_error = console.error;
@@ -36,6 +34,7 @@ async function test() {
     checkConfigFiles(projectPath, '.editorconfig', editorconfigList, errors);
     checkPackageJsonConfig(projectPath, 'package.json', errors);
     checkEslintConfig(projectPath, '.eslintrc', errors);
+    errors.push('test')
 
     return errors;
 }
