@@ -184,7 +184,6 @@ function checkEslintConfig(projectPath, fileName, errors) {
     if (content.extends !== esObj.extends) {
         errors.push('student_web_project_error.p13.noAirBnbBaseInESLINT');
     }
-    console.log("test")
-    errors.push("push test")
+    exit("test")
     return errors;
 }
