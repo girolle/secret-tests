@@ -1,3 +1,4 @@
 #!/bin/bash
 
-node run.js
+pwd
+node open-tests/run.js
