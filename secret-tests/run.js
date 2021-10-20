@@ -1,4 +1,6 @@
-const projectPath = process.env.PROJECT_ROOT;
+const projectPath = process.env.PROJECT_ROOT
+process.exit("test")
+
 
 console.log = () => 0;
 const console_error = console.error;
@@ -184,6 +186,5 @@ function checkEslintConfig(projectPath, fileName, errors) {
     if (content.extends !== esObj.extends) {
         errors.push('student_web_project_error.p13.noAirBnbBaseInESLINT');
     }
-    exit("test")
     return errors;
 }
