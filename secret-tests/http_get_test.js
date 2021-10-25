@@ -24,10 +24,10 @@ function get(reletiveURI) {
             res.on('data', (chunk) => { rawData += chunk; });
             res.on('end', () => {
                 resolve({ done: true, data: { res, rawData } });
+                console.log("\n\n\n\nin get\n\n\n\n");
             });
         }).on('error', error => {
             resolve({ done: false });
-            console.log("\n\n\n\nin get\n\n\n\n");
         });
         req.end();
     });
