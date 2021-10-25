@@ -15,7 +15,6 @@ function get(reletiveURI) {
                 'Cookie': set_cookie
             }
         };
-        console.log("\n\n\n\nin get\n\n\n\n");
         if ('token' in dataFromServer) {
             get_options.headers.authorization = 'Bearer ' + dataFromServer.token;
         }
@@ -28,6 +27,7 @@ function get(reletiveURI) {
             });
         }).on('error', error => {
             resolve({ done: false });
+            console.log("\n\n\n\nin get\n\n\n\n");
         });
         req.end();
     });
