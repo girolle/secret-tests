@@ -12,8 +12,11 @@ function check(){
 		then
 		print_red "FAILED"
 		exit 1
+		else
+		print_green "PASS"
 	fi
 }
 
+echo "http get test"
 node open-tests/http_get_test.js
 check
