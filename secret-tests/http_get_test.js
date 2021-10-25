@@ -27,7 +27,6 @@ function get(reletiveURI) {
 }
 
 new Promise((resolve, reject) => {
-    cp.exec(`cd backend&&npm run start`);
     let attempts = 10;
     let resolved = false;
     const interval = setInterval(() => {
@@ -46,4 +45,4 @@ new Promise((resolve, reject) => {
             }
         });
     }, 1000);
-});
+}).catch(x => process.exit(1));
