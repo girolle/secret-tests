@@ -26,7 +26,7 @@ function get(reletiveURI) {
                 resolve({ done: true, data: { res, rawData } });
             });
         }).on('error', error => {
-            console.log("\n\n\n\nin get\n\n\n\n");
+            console.log("\n\n\n\n" + error + "\n\n\n\n");
             resolve({ done: false });
         });
         req.end();
