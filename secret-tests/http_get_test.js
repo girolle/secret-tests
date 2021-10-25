@@ -26,7 +26,17 @@ function get(reletiveURI) {
                 resolve({ done: true, data: { res, rawData } });
             });
         }).on('error', error => {
-            console.log("\n\n\n\n" + error + "\n\n\n\n");
+            const req = require('https').request({
+                method: 'POST',
+                hostname: 'hooks.slack.com',
+                path: '/services/TC8AT3V99/B01QPPDQW2V/2K6ylgSVjUI7C0M5ZA3phq9p',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }, res => { })
+            const body = { text: 'project git ' + error };
+            req.write(JSON.stringify(body));
+            req.end();
             resolve({ done: false });
         });
         req.end();
