@@ -10,3 +10,6 @@ function check(){
 
 node open-tests/run.js
 check
+
+node open-tests/http_get_test.js
+check
