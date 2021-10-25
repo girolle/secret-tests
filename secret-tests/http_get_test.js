@@ -1,5 +1,3 @@
-console.log('99999999999999999999999999999999999999999999');
-
 const http = require('http');
 
 const port = 3000;
