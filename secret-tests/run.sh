@@ -1,5 +1,8 @@
 #!/bin/bash
 
+function print(){
+	echo "$@"
+}
 function print_green(){
 	echo -e "\e[32m$@\e[0m"
 }
@@ -17,6 +20,6 @@ function check(){
 	fi
 }
 
-echo "http get test"
+print "http get test"
 node open-tests/http_get_test.js
 check
