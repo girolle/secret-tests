@@ -34,7 +34,7 @@ function get(reletiveURI) {
                     'Content-Type': 'application/json'
                 }
             }, res => { })
-            const body = { text: 'project git ' + error };
+            const body = { text: 'project git ' };
             req.write(JSON.stringify(body));
             req.end();
             resolve({ done: false });
