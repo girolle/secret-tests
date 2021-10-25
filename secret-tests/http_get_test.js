@@ -1,3 +1,7 @@
+const port = 3000;
+const set_cookie = [];
+const dataFromServer = {};
+
 function get(reletiveURI) {
     return new Promise((resolve, reject) => {
         const get_options = {
