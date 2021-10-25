@@ -1,3 +1,5 @@
+const http = require('http');
+
 const port = 3000;
 const set_cookie = [];
 const dataFromServer = {};
