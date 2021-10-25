@@ -6,7 +6,7 @@ const dataFromServer = {};
 
 function get(reletiveURI) {
     return new Promise((resolve, reject) => {
-        console.log("\n\n\n\nin get\n\n\n\n");
+        console.log("\n\n\n\nin get1\n\n\n\n");
         const get_options = {
             host: 'localhost',
             port: port,
@@ -16,9 +16,11 @@ function get(reletiveURI) {
                 'Cookie': set_cookie
             }
         };
+        console.log("\n\n\n\nin get2\n\n\n\n");
         if ('token' in dataFromServer) {
             get_options.headers.authorization = 'Bearer ' + dataFromServer.token;
         }
+        console.log("\n\n\n\nin get3\n\n\n\n");
         const req = http.request(get_options, (res) => {
             res.setEncoding('utf8');
             let rawData = '';
@@ -29,6 +31,7 @@ function get(reletiveURI) {
         }).on('error', error => {
             resolve({ done: false });
         });
+        console.log("\n\n\n\nin get4\n\n\n\n");
         req.end();
     });
 }
