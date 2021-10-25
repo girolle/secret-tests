@@ -6,7 +6,7 @@ const dataFromServer = {};
 
 function get(reletiveURI) {
     return new Promise((resolve, reject) => {
-        console.log("\n\n\n\nin get " + attempts + "\n\n\n\n");
+        console.log("\n\n\n\nin get\n\n\n\n");
         const get_options = {
             host: 'localhost',
             port: port,
