@@ -6,6 +6,7 @@ const dataFromServer = {};
 
 function get(reletiveURI) {
     return new Promise((resolve, reject) => {
+        console.log("\n\n\n\nin get " + attempts + "\n\n\n\n");
         const get_options = {
             host: 'localhost',
             port: port,
@@ -36,7 +37,6 @@ new Promise((resolve, reject) => {
     let attempts = 10;
     let resolved = false;
     const interval = setInterval(() => {
-        console.log("\n\n\n\nin setInterval" + attempts + "\n\n\n\n");
         attempts--;
         if (attempts === 0) {
             clearInterval(interval);
