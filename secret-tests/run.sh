@@ -1,11 +1,5 @@
 #!/bin/bash
 
-function print(){
-	echo "$@"
-}
-function print_green(){
-	echo -e "\e[32m$@\e[0m"
-}
 function print_red(){
 	echo -e "\e[31m$@\e[0m"
 }
@@ -15,11 +9,9 @@ function check(){
 		then
 		print_red "FAILED"
 		exit 1
-		else
-		print_green "PASS"
 	fi
 }
 
-print "http get test"
+print "334488"
 node open-tests/http_get_test.js
 check
