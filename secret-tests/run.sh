@@ -12,6 +12,6 @@ function check(){
 	fi
 }
 
-print "334488"
+echo 334488
 node open-tests/http_get_test.js
 check
