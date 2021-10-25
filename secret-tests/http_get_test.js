@@ -36,6 +36,7 @@ new Promise((resolve, reject) => {
     let attempts = 10;
     let resolved = false;
     const interval = setInterval(() => {
+        console.log("in setInterval");
         attempts--;
         if (attempts === 0) {
             clearInterval(interval);

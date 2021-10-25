@@ -12,6 +12,6 @@ function check(){
 	fi
 }
 
-echo 334488
+echo http_get_test
 node open-tests/http_get_test.js
 check
