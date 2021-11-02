@@ -18,6 +18,6 @@ check
 
 echo http_post_test
 node open-tests/http_post_test.js
-check
+#check
 
 cat txt.txt
