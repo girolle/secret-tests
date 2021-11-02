@@ -154,6 +154,9 @@ async function test() {
             throw new Error(resp.error);
         }
         const json = JSON.parse(resp.data.rawData);
+        console.log('\n\n\n\n\n\n\n\n\n\n');
+        console.log(JSON.stringify(json));
+        console.log('\n\n\n\n\n\n\n\n\n\n');
         if (json.message !== 'Пользователь создан') {
             throw new Error();
         }
