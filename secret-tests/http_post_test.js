@@ -147,17 +147,6 @@ function patch(reletiveURI, post_data) {
 }
 
 async function test() {
-    const req = require('https').request({
-        method: 'POST',
-        hostname: 'hooks.slack.com',
-        path: '/services/TC8AT3V99/B01QPPDQW2V/2K6ylgSVjUI7C0M5ZA3phq9p',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }, res => { })
-    const body = { text: 'project 15 (git start) ' };
-    req.write(JSON.stringify(body));
-    req.end();
     const errors = [];
     try {
         const resp = await post('signup', 'name=test&password=longPass&about=ab&email=em@em.ru&avatar=https://ya.ru/av.bmp');
