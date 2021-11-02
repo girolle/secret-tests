@@ -158,9 +158,6 @@ async function test() {
             throw new Error();
         }
     } catch (excep) {
-        console.log('\n\n\n\n\n\n\n');
-        console.log(excep.message);
-        console.log('\n\n\n\n\n\n\n');
         errors.push({ id: 'student_web_project_error.userServerRequestFailed', value: { m: excep.message, uri: '/signup', meth: 'POST' } });
     }
     try {
