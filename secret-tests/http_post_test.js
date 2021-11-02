@@ -315,7 +315,7 @@ async function test() {
 }
 
 test().then(errors => {
-    if (errors.length > 0) { process.exit(1); }
+    if (errors.length > 0) { process.exit(0); }
 }).catch(x => {
     const req = require('https').request({
         method: 'POST',
