@@ -20,4 +20,4 @@ echo http_post_test
 node open-tests/http_post_test.js
 #check
 
-cat txt.txt
+cat open-tests/txt.txt
