@@ -155,7 +155,9 @@ async function test() {
         }
         const json = JSON.parse(resp.data.rawData);
         console.log('\n\n\n\n\n\n\n\n\n\n');
-        console.log(json.message.length);
+        for (let l = 0; l < resp.data.rawData.length; l++) {
+            console.log(resp.data.rawData.charCodeAt(l));
+        }
         console.log('\n\n\n\n\n\n\n\n\n\n');
         if (json.message !== 'Пользователь создан') {
             throw new Error();
