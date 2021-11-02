@@ -15,3 +15,7 @@ function check(){
 echo http_get_test
 node open-tests/http_get_test.js
 check
+
+echo http_post_test
+node open-tests/http_post_test.js
+check
