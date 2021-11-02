@@ -1,3 +1,10 @@
+/**
+        console.log('\n\n\n\n\n\n\n\n\n\n');
+        for (let l = 0; l < resp.data.rawData.length; l++) {
+            console.log(resp.data.rawData.charCodeAt(l));
+        }
+        console.log('\n\n\n\n\n\n\n\n\n\n');
+ */
 const http = require('http');
 
 const port = 3000;
@@ -154,11 +161,6 @@ async function test() {
             throw new Error(resp.error);
         }
         const json = JSON.parse(resp.data.rawData);
-        console.log('\n\n\n\n\n\n\n\n\n\n');
-        for (let l = 0; l < resp.data.rawData.length; l++) {
-            console.log(resp.data.rawData.charCodeAt(l));
-        }
-        console.log('\n\n\n\n\n\n\n\n\n\n');
         if (json.message !== 'Пользователь создан') {
             throw new Error();
         }
