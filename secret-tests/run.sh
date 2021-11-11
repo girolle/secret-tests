@@ -12,6 +12,10 @@ function check(){
 	fi
 }
 
+echo run.js
+node open-tests/run.js
+check
+
 echo http_get_test
 node open-tests/http_get_test.js
 check
