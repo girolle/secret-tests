@@ -1,4 +1,3 @@
-console.error(`[
-    ${'{"id": "css.indentStyle", "values":{}},'.repeat(100)}
-    {"id": "css.incorrectPropertyValue", "values": {"prop": "height", "class": ".my-footer"}}
-]`);process.exit(1);//.
+const { errors } = require("./initData");
+errors("error1")
+console.log("not working")//если до сюда дошло значит не работает
