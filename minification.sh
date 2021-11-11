@@ -20,12 +20,12 @@ minify(){
 					exit 1
 				fi
 			elif [[ "$FILE" =~ ".sh" ]] ; then
-                shc -f "${FILE}"
+         #       shc -f "${FILE}"
 				if [[ $? != 0 ]] ; then
 					echo "MINIFICATION FAILED"
 					exit 1
 				fi
-				rm "${FILE}" "${FILE}.x.c"
+	#			rm "${FILE}" "${FILE}.x.c"
 			fi
 		fi
 	fi
